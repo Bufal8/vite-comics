@@ -23,7 +23,7 @@ export default{
 
           <div class="txt-item">
           
-            <h5>DIGITAL COMICS</h5>
+            <h6>DIGITAL COMICS</h6>
 
           </div>
 
@@ -39,7 +39,7 @@ export default{
 
           <div class="txt-item">          
 
-            <h5>DC MERCHANDISE</h5>
+            <h6>DC MERCHANDISE</h6>
 
           </div>
 
@@ -55,7 +55,7 @@ export default{
 
           <div class="txt-item">          
 
-            <h5>SUBSCRIPTION</h5>
+            <h6>SUBSCRIPTION</h6>
 
           </div>
 
@@ -72,7 +72,7 @@ export default{
 
           <div class="txt-item">          
 
-            <h5>COMIC SHOP LOCATOR</h5>
+            <h6>COMIC SHOP LOCATOR</h6>
 
           </div>
 
@@ -82,13 +82,13 @@ export default{
           
           <div class="img-item">          
 
-            <img style="width: 60px; margin-right: 20px;" src="../assets/images/buy-dc-power-visa.svg" alt="">
+            <img style="width: 50px; margin-right: 20px; margin-top: 8px;" src="../assets/images/buy-dc-power-visa.svg" alt="">
 
           </div>
 
           <div class="txt-item">          
 
-            <h5>DC POWER VISA</h5>
+            <h6>DC POWER VISA</h6>
 
           </div>
 
@@ -102,27 +102,39 @@ export default{
 
 <style lang="scss" scoped>
 
-@use '../styles/partials/variables' as *;
+    @use '../styles/partials/variables' as *;
 
-@use '../styles/partials/mixins' as *;
+    @use '../styles/partials/mixins' as *;
 
-main {
-  background-color: $primary;
-  padding: 50px 0;
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;  
+    main {
+      background-color: $primary;
+      padding: 50px 0;
+      .container {
+        width: 80%;
+        @include center();
+        justify-content: space-between; 
 
-    .item {
-      display: flex;
-      align-items: center;
+        .item {
+          display: flex;
+          align-items: center;
+          width: 15%;
 
-      img{
-        width: 50%;
+          .img-item{
+            width: 50px;
+            height: 50px;
+
+            img{
+              max-width: 50px;
+              max-height: 50px;
+            }
+
+          }
+
+          .txt-item{
+            font-size: 16px;
+          }
+
         }
-
       }
     }
-}
 </style>
