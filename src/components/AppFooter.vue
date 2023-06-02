@@ -14,7 +14,7 @@ export default {
     <footer>
         <div class="cols container">
             <a class="logo" href="/">
-                <img src="/dc-logo.png" alt="dc">
+                <img src="../assets/images/dc-logo.png" alt="dc">
             </a>
 
             <div class="footer-links">
@@ -82,7 +82,8 @@ footer {
                 text-decoration: none;
                 font-size: 0.875em;
 
-                &:hover {
+                &:hover,
+                &:active {
                     color: $primary;
                 }
             }

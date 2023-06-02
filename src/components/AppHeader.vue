@@ -65,15 +65,19 @@ export default {
 <template>
     <header>
         <div class="container">
+            <div class="logo">
 
-            <a href="/" class="brand">
-                <img src="/dc-logo.png" alt="dc">
-            </a>
+                <a href="/" class="brand">
+                    <img src="../assets/images/dc-logo.png" alt="dc">
+                </a>
+
+            </div>
+            
 
             <nav>
                 <ul>
                     <li v-for="link in links">
-                        <a :href="link.url" :class="{ active: link.current }">{{ link.text }}</a>
+                        <a :href="link.url" :class="{ active :link.current }">{{ link.text }}</a>
                     </li>
 
                 </ul>
@@ -89,51 +93,61 @@ export default {
 header {
     // text-align: center;
     height: 100px;
-
+    background-color: #ffffff;
+    width: 100%;
     .container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: center;
         height: 100%;
+        width: 80%;
 
-        .brand {
-            width: 80px;
+        .logo {
+            width: 50%;
             height: 100%;
             @include center();
-            align-items: center;
+            justify-content: start;
+
+            img{
+                width: 60px;
+                
+            }
         }
 
         nav {
             height: 100%;
+            width: 50%;
 
             ul {
 
                 list-style-type: none;
                 margin: 0;
                 @include center();
-                height: 100%;
-
+                height: 100%;                
+                
                 li {
                     height: 100%;
+                    width: 100%;
+                    text-align: center;
+                    margin-right: 10px;
+
+                    &:active,
+                    &:hover {
+
+                        color: $primary;
+                        border-bottom: 5px solid $primary;
+                    }
 
                     a {
-                        height: 100%;
-                        text-transform: uppercase;
+                        margin-top: 40px;
                         display: inline-block;
-                        padding: 2rem 0;
-                        margin: 0 1rem;
+                        text-transform: uppercase;
                         text-decoration: none;
                         font-weight: 600;
                         font-size: 12px;
                         transition: background 0.3s;
 
-                        &.active,
-                        &:hover {
-                            // background-color: lighten($primary, 90%);
-                            // background-color: $primary;
-                            color: $primary;
-                            border-bottom: 5px solid $primary;
-                        }
                     }
                 }
             }
