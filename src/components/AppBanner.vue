@@ -1,5 +1,3 @@
-
-export default {
 <script>
 export default{
     name: "AppBanner",
