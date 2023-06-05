@@ -2,6 +2,7 @@
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
 import AppMain from './components/AppMain.vue'
+import AppJumbotron from './components/AppJumbotron.vue'
 import AppBanner from './components/AppBanner.vue'
 import AppUnderFooter from './components/AppUnderFooter.vue'
 
@@ -11,7 +12,8 @@ export default {
     AppMain,
     AppFooter,
     AppBanner,
-    AppUnderFooter
+    AppUnderFooter,
+    AppJumbotron
   }
 }
 
@@ -19,6 +21,7 @@ export default {
 
 <template>
   <AppHeader />
+  <AppJumbotron />
   <AppMain />
   <AppBanner/>
   <AppFooter />
